@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>using function</title>
+</head>
+<body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div ng-app="ass3" ng-controller="ass3">
+<br>
+{{print()| date : "dd.MM.y" }}
+<br>
+<br>
+{{last()}}
+</div>
+<script>
+var app=angular.module('ass3',[]);
+app.controller('ass3',function($scope){
+$scope.print=function(){
+return new Date();
+};
+$scope.last=function(){
+return new Date(document.lastModified);
+};
+});
+</script>
+</body>
+</html>

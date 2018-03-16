@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<body ng-app="myApp">
+<p><b>CD Parlour Name:</b>XYZ</p>
+<p><b>CD Address:</b>Hyderabad</p>
+<p><b>Top 5 CD's</b>
+<ol>
+<li>xyz1</li>
+<li>xyz2</li>
+<li>xyz3</li>
+<li>xyz4</li>
+<li>xyz5</li>
+</ol>
+</p>
+<a href="#!View all CDs">View all CDs</a>
+<a href="#!New CDs">New CDs</a>
+<div ng-view></div>
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/View all CDs", {
+        template : "<p>xyz1<br>xyz2<br>xyz3<br>xyz4<br>xyz5<br>xyz6<br>xyz7<br>xyz8</p>"
+    })
+    .when("/New CDs", {
+        template : "<p>xyz6<br>xyz7<br>xyz8</p>"
+    })
+   
+});
+</script>
+
+</body>
+</html>

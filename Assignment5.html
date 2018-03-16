@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #fffff;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff
+}
+</style>
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div ng-app="myApp" ng-controller="ass5">
+CD Parlour name:{{CDParlorname}} <br>
+CD headofficeaddress:{{headofficeaddress}}
+<table>
+  <tr ng-repeat="x in details">
+    <td>{{x.title}}</td>
+    <td>{{x.language}}</td>
+    <td>{{x.price}}</td>
+  </tr>
+</table>
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('ass5', function($scope) {
+$scope.headofficeaddress="Hyderabd";
+$scope.CDParlorname="ABC"; 
+$scope.details= [
+{title:'xyz',language:'telugu',price:123},
+{title:'xyz1',language:'telugu',price:1234},
+{title:'xyz2',language:'telugu',price:1235}
+]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+</head>
+<body ng-app="">
+<input type="text" ng-model="n1">
+<div ng-switch ="n1">
+<div ng-switch-when="CDMK1610"><p>{{1000*0.1}}</p></div>
+<div ng-switch-when="CDMK1620"><p>{{1000*0.2}}</p></div>
+<div ng-switch-when="CDMK1690"><p>{{1000*0.9}}</p></div>   
+<div ng-switch-default><p>{{1000*0.5}}</p></div>               
+</div>
+</body>
+</html>	
